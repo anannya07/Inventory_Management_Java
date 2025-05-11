@@ -1,8 +1,29 @@
-This project demonstrates practical application of fundamental Core Java concepts through an inventory management solution. At its foundation, the implementation leverages Java's object-oriented programming paradigm with a well-structured class hierarchy. The Product class showcases proper encapsulation with private fields and public getters/setters, while implementing Serializable for persistent storage.
-Exception handling is implemented through a custom InventoryException class, demonstrating how to create domain-specific exceptions that provide meaningful error messages rather than relying solely on generic Java exceptions. This approach enhances code readability and maintenance.
-Java's Collections Framework is utilized extensively - HashMap provides O(1) lookup performance for product retrieval by ID, while ArrayList offers flexible collection management for search results and reporting. The code demonstrates advanced collection operations through Comparator implementations for sorting products by various criteria.
-File I/O operations employ ObjectInputStream and ObjectOutputStream for serialization, allowing the application to maintain data persistence between sessions without requiring a database. This showcases Java's built-in capabilities for data storage.
-The implementation uses Java's modern Date/Time API (LocalDate) to manage expiration dates, demonstrating date comparisons and calculations for determining expired products. DateTimeFormatter provides flexible date formatting for user display.
-Input validation throughout the user interface prevents runtime errors by catching and handling exceptions, employing loops to ensure valid input is received before proceeding with operations. This defensive programming approach creates a robust application.
-The console interface demonstrates scanner usage for user input while implementing a menu-driven workflow. Helper methods abstract input complexity, enhancing code organization and readability.
-The application's structure follows good software engineering principles with separation of concerns - the InventoryManager handles business logic and data operations, while the InventoryApp class manages user interaction, creating a maintainable, extendable codebase that effectively demonstrates core Java principles in a practical, real-world context.
+# 🛒 **Inventory Management System in Core Java** 📦
+
+This project demonstrates the practical application of **fundamental Core Java concepts** through an **Inventory Management Solution**. The implementation leverages Java's **object-oriented programming paradigm**, showcasing best practices in class hierarchy design, exception handling, collections, file I/O, and more. Below is a detailed explanation of how the key Java concepts are applied to build this robust and maintainable system.
+
+## 🚀 **Project Overview**
+
+This **Inventory Management System** demonstrates the use of Java's powerful features in a practical, real-world context. It manages products, handles exceptions, performs efficient data storage, and ensures user-friendly interaction through a console-based interface. Key concepts explored include:
+
+- **Object-Oriented Programming (OOP)** 🏗️
+- **Exception Handling** 🛠️
+- **Collections Framework** 🧑‍💻
+- **File I/O and Serialization** 💾
+- **Java Date/Time API** 📅
+- **Input Validation** ✅
+
+## 🔑 **Key Features**
+
+### 1. **Object-Oriented Design** 🏗️
+The system follows an object-oriented approach with a **well-structured class hierarchy**. The `Product` class demonstrates **proper encapsulation** using private fields and public getters/setters to control access to data. Additionally, the `Serializable` interface is implemented to allow **persistent storage** of product data.
+
+### 2. **Custom Exception Handling** 🚨
+A custom exception class, **`InventoryException`**, is used to create domain-specific exceptions. This ensures that meaningful error messages are provided to the user instead of relying on generic Java exceptions, thus improving **readability** and **maintainability** of the code.
+
+```java
+public class InventoryException extends Exception {
+    public InventoryException(String message) {
+        super(message);
+    }
+}
